@@ -5,7 +5,6 @@ var randomstring = require('randomstring');
 var User = require('../app/models/user');
 
 var authenticationMiddleware = require('./../app/helper/authentication');
-const { response } = require('../app');
 
 /* PASSWORD ENCRYPT CONSTANTS */
 const DIGITS_TO_REC = 6;
