@@ -3,7 +3,7 @@ mongoose.set('debug', true)
 
 var Schema = mongoose.Schema;
 
-var ProductSchema = mongoose.Schema({
+var ProductSchema = new Schema({
     image: {
         type: String,
         required: true

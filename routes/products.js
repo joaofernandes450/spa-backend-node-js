@@ -20,7 +20,7 @@ router.get('/', authenticationMiddleware.verifyToken, asyncMiddleware(async (req
 }))
 
 /**
- * Returns Products based on type (i.e., "soup", "desert")
+ * Returns Products based on type (i.e., "soup", "dessert")
  */
 router.get('/filter/:type', authenticationMiddleware.verifyToken, asyncMiddleware(async (req, res, next) => {
     const products = await Product.find({ type: req.params.type });
@@ -156,7 +156,7 @@ router.post('/populate', asyncMiddleware(async (req, res, next) => {
         },
         price: 1,
         tags: ["veggie"],
-        type: "desert"
+        type: "dessert"
     }
 
     const desert2 = {
@@ -178,7 +178,7 @@ router.post('/populate', asyncMiddleware(async (req, res, next) => {
         },
         price: 1,
         tags: ["veggie"],
-        type: "desert"
+        type: "dessert"
     }
 
     const desert3 = {
@@ -200,7 +200,7 @@ router.post('/populate', asyncMiddleware(async (req, res, next) => {
         },
         price: 1,
         tags: ["veggie"],
-        type: "desert"
+        type: "dessert"
     }
 
     const soup1 = {
